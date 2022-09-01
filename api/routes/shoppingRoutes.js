@@ -1,11 +1,11 @@
 import express from 'express';
-import * as shoController from '../controllers/productController.js';
+import * as shoppingController from '../controllers/shoppingController.js';
 
-const router = expppiress.Router();
+const router = express.Router();
 
 router
-    .route('/products')
+    .route('/shoppings')
     .get()
-    .post(productController.createProduct);
+    .post(shoppingController.createShopping);
 
 export default router;

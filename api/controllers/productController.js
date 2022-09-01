@@ -15,4 +15,19 @@ const createProduct = async (req, res) => {
   }
 };
 
-export { createProduct };
+const getAllProducts = async (req, res) => {
+  try {
+    const books = await Product.find();
+    return res.json({
+      msg: "productos encontrados",
+      data: books,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      msg: "Error al buscar productos",
+      data: error,
+    });
+  }
+};
+
+export { createProduct, getAllProducts };

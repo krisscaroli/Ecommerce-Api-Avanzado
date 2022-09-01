@@ -9,4 +9,7 @@ export default {
   database: {
     uri: process.env.URI || "mongodb://127.0.0.1/ecomerce",
   },
+  jwt: {
+    secret: process.env.JWT_SECRET,
+  },
 };

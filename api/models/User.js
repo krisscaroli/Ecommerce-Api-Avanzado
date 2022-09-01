@@ -11,19 +11,17 @@ const schema = new mongoose.Schema({
   location: String,
   outdoorNumber: Number,
   intdoorNumber: Number,
-  betweenStreets:String,
+  betweenStreets: String,
   city: String,
   country: String,
-  zipCode:String,
+  zipCode: String,
   references: String,
   personalContact: String,
   role: {
     type: String,
-    enum: ['Administrator', 'Seller', 'Customer'],
-    default: 'Seller',
-
+    enum: ["Administrator", "Seller", "Customer"],
+    default: "Seller",
   },
-
 });
 
 export default mongoose.model("User", schema);
